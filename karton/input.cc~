@@ -1,0 +1,19 @@
+#include "karton.hpp"
+// write vars to our struct
+void input()
+{
+  cout << "How  many items do you wan't?" << endl;
+  cin  >> quantity;
+  
+  how_many=quantity/12;
+  How_many=how_many;
+  karton _Karton[how_many];
+  karton *_Karton = &_Karton;
+
+  cout << "What's the weight of one item?";
+  cin  >> weight;
+
+  cout << "How long is your track?";
+  cin  >> track_lenght;
+
+}

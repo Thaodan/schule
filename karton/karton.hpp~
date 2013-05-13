@@ -1,0 +1,7 @@
+// define our karton
+typedef struct {
+  char name[4];
+  double weight;
+  
+
+} karton;
