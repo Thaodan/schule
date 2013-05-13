@@ -26,8 +26,8 @@ using namespace std;
   
 */
 typedef struct {
-  double price=7.85;
-  long weight=0;;
+  double price;
+  long weight;;
 } item;
 
 
@@ -38,7 +38,7 @@ typedef struct {
 */
 
 typedef struct {
-  long weight=24000;
+  long weight=24;
   item  Items[12];
 } karton;
 
@@ -62,7 +62,7 @@ typedef struct {
   long how_many;
   long weight;
 } input;
-void create(karton *Karton,long quantity, long weight);
-void Sinput(input *Input);
+long create(karton *Karton,long quantity, long weight);
+bool Sinput(input *Input);
 void output(stack *Stack);
 #endif

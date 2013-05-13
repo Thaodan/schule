@@ -1,20 +1,24 @@
 #include "karton.hpp"
 // create x items and return an arrays with the resulting kartons
-void create(karton *Karton, long quantity, long weight)
+long create
+(karton *Karton, long how_many, long weight)
 {
   // out counter to know when we need to create a new karton
-  int item_counter;
-  long karton_counter; 
-  while ( quantity > 0)
+  int item_counter=0;
+  long items_created;
+  while ( how_many > 0)
     {
-      item Item;
-      *Karton.Items[item_counter].weight=weight;
+      Karton->Items[item_counter].weight=weight;
+      Karton->Items[item_counter].price=7.82;
+      item_counter++;
       if ( item_counter  == 12 )
 	{
-	  karton_counter++;
+	  Karton++;
+	  how_many--;
 	  item_counter=0;
 	}
+      items_created;
 
-      quantity--;
     }	
+  return items_created;
 }
