@@ -1,4 +1,0 @@
-schule
-======
-
-my school stuff
