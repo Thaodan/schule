@@ -21,13 +21,14 @@
 #define KARTON_HPP
 using namespace std;
 #include <iostream>
+
 /*
   price of our item 7.85€
   
 */
 typedef struct {
   double price;
-  long weight;;
+  long weight;
 } item;
 
 
@@ -52,17 +53,22 @@ typedef struct {
   double price; //  ware price
   double fprice; // final price 
   double discount; // discount
-  double how_many;
-  long track_lenght;
+  double how_many; // how kartons we got
+  long track_lenght; // how far we travel
  } stack;
 
 typedef struct {
   long quantity=0;
   long track_lenght;
-  long how_many;
   long weight;
 } input;
-long create(karton *Karton,long quantity, long weight);
+
+/* our functions
+   create: fill kartons with items
+   Sinput: get input
+   output: output our result
+*/
+void create(karton *Karton,long how_many, long weight,long quantity);
 bool Sinput(input *Input);
 void output(stack *Stack);
 #endif

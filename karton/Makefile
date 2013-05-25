@@ -1,7 +1,8 @@
 CXX=g++
 TARGET=karton
 OBJS=create.o input.o main.o output.o
-CXXFLAGS=-std=c++11
+HEADER=karton.hpp
+CXXFLAGS=-std=c++11 -Wall
 
 all: $(TARGET)
 
@@ -12,7 +13,7 @@ clean:
 	rm -f $(TARGET)
 	rm -rf $(OBJS)
 
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) $(HEADER)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
 
