@@ -1,12 +1,12 @@
 CXX=g++
 TARGET=teamarbeit
-OBJS=main.o eingabe.o ausgabe.o berechno.o
+OBJS=main.o eingabe.o ausgabe.o berechnen.o faku.o
 HEADER=teamarbeit.hpp
 CXXFLAGS=-std=c++11 -Wall
 
 all: $(TARGET)
 
-%.o: %.cc
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c  $<  -o $@
 
 clean:
