@@ -24,8 +24,9 @@ using namespace std;
 
 /*
   price of our item 7.85€
-  
+  define it as macro as we set it static
 */
+#define ITEM_PRICE 7.82
 typedef struct {
   double price;
   long weight;
@@ -53,7 +54,7 @@ typedef struct {
   double price; //  ware price
   double fprice; // final price 
   double discount; // discount
-  double how_many; // how kartons we got
+  int how_many; // how kartons we got
   long track_lenght; // how far we travel
  } stack;
 
