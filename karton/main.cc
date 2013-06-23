@@ -13,7 +13,7 @@ int main()
 	{
 	  delete Stack; // cleanup
 	  delete Input;
-	  return 0;
+	  break;
 	}
       /* 
 	 get how many kartons we need
