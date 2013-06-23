@@ -2,7 +2,7 @@ CXX=g++
 TARGET=karton
 OBJS=create.o input.o main.o output.o
 HEADER=karton.hpp
-CXXFLAGS=-std=c++11 -Wall
+override CXXFLAGS+=-std=c++11 -Wall
 
 all: $(TARGET)
 
