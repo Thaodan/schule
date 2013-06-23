@@ -1,8 +1,11 @@
 #include "karton.hpp"
-// write vars to our struct
+/* 
+   write vars to our struct
+   if user wants to quit it returns false
+ */
 bool Sinput(input *Input)
 {
-  cout << "How  many items do you wan't?" << endl;
+  cout << "How  many items do you wan't? (enter zero to abort)" << endl;
   cin  >> Input->quantity;
   if (Input->quantity == 0 )
     return false;
@@ -15,3 +18,4 @@ bool Sinput(input *Input)
   
   return true;
 }
+
