@@ -9,7 +9,7 @@ void  create
   while ( how_many > 0|| quantity > 0)
     {
       Karton->Items[item_counter].weight=weight;
-      Karton->Items[item_counter].price=ITEM_PRICE;;
+      Karton->Items[item_counter].price=7.82;
       item_counter++;
       if ( item_counter  == 12 )
 	{
