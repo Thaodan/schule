@@ -11,4 +11,5 @@ void output(stack *Stack)
   cout << "Profit + Weight:" << Stack->wprice + Stack->price << endl;
   cout << "Discount :" << Stack->discount  << endl;
   cout << "Final Price " << Stack->fprice << endl;
+  cout << "-------------------------------------------------" << endl;
 }
