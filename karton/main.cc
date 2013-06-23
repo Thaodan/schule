@@ -1,15 +1,11 @@
 #include "karton.hpp"
-#define MAX_RUNS 20
+
 int main()
 {
-  long how_many=0, quantity; // our private vars to count our results
-  int item_counter=0; // our counter to test if we need to open a new karton
-  int runs=MAX_RUNS;  // how many times we run our main loop
-  stack * Stack; // make our pointer to our stack
-  input * Input; // same for Input 
-  karton * Karton; // same for Karton
+  long quantity_counter; // our private vars to count our results
+  char item_counter=0; // our counter to test if we need to open a new karton 
 
-  while (runs != 0 )
+  while (1)
     {
       stack * Stack = new stack; // make new stack and new input
       input * Input = new input;
@@ -19,16 +15,22 @@ int main()
 	  delete Input;
 	  return 0;
 	}
-      Stack->how_many = Input->quantity/12+1; // get how many kartons we need
-      how_many = Stack->how_many; //
+      /* 
+	 get how many kartons we need
+	 we need at least one
+       */
+      Stack->how_many = Input->quantity/12;
+      if ( Stack->how_many == 0 )
+        Stack->how_many=1;
+      
+      //how_many = Stack->how_many; //
       Stack->track_lenght = Input->track_lenght; 
-      karton * Karton = new karton[how_many]; // make our kartons
-      quantity = Input->quantity;
+      karton * Karton = new karton[Stack->how_many]; // make our kartons
+      quantity_counter = Input->quantity;
       // lets create our kartons with their items
-      create(Karton,how_many,Input->weight,Input->quantity);
+      create(Karton,Stack->how_many,Input->weight,Input->quantity);
       // now count how much weight we got
-      while ( how_many > 0 || quantity  > 0 ) // do this till we out of boxes 
-	                                      // or  out of items
+      while ( quantity_counter  > 0 ) // do this till we out of  items
 	{
 	  Stack->weight+=Karton->Items[item_counter].weight;
 	  Stack->price+=Karton->Items[item_counter].price;
@@ -42,9 +44,8 @@ int main()
 	      item_counter=0;
 	      Stack->weight+=Karton->weight;
 	      Karton++;
-	      how_many--;
 	    }
-	  quantity--;
+	  quantity_counter--;
 	}
       Stack->rweight  = Stack->weight % 100;
       if (Stack->rweight == 0 ) 
@@ -66,8 +67,6 @@ int main()
 	}
 
       output(Stack);
-      runs--;
-      how_many=0;
       item_counter=0;
       Karton=0;
       delete Stack;
