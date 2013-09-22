@@ -32,7 +32,7 @@ void locher(int *schein_rohling, int* schein)
     {
       for (int i1; i1 < MAX_RNDNUMBERS;i0++)
 	{
-	  if ( *schein_rohling[i0] ==  *ziehung[i1] )
+	  if ( schein_rohling[i0] ==  ziehung[i1] )
 	    schein[i0]='0';
 	  else
 	    {
@@ -92,10 +92,11 @@ bool ResultFrame(int *schein) {
 	}
       case 'q':
       case 'Q':
-      case default:
 	{
-	  return false;
+	  return False;
 	}
+      case :default:
+	return false;
       }
   return false;
 }

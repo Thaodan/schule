@@ -8,7 +8,7 @@ using namespace std;
 struct schuler {
     string name;
     string vorname;
-    vector<int> noten[];
+    vector<int> noten;
     float durchschnitt;
 };
 #define STUB cout << "stub in __FILE_:__LINE_"

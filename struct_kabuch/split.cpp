@@ -8,7 +8,7 @@ vector<string> split(char delim[], string str)
   @returns split string
 */
 {
-    char *dup_str = strdump(str);
+    char *dup_str = strdup(str.c_str());
     vector<string> tmp_str; /*  string that we return    */
     char *cur_token, *ptr; /* current pointer and token*/
     int tmp_str_i=0; 

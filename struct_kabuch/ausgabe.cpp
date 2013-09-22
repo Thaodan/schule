@@ -1,10 +1,10 @@
 #include "kabuch.hpp"
 
-void tab_ausgabe(schuler klasse[])
+void tab_ausgabe(vector<schuler> *klasse)
 {
     STUB;
 }
-void histogramm(schuler klasse[])
+void histogramm(vector<schuler> *klasse)
 {
     STUB;
 }
