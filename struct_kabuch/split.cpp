@@ -27,5 +27,6 @@ vector<string> split(char delim[], string str)
 	    tmp_str_i++;
 	}
     }
+    //delete dup_str;
     return tmp_str;
 }
