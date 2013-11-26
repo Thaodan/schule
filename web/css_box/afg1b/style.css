@@ -1,0 +1,22 @@
+#box3
+{
+    float: left;
+}
+
+#box4 
+{
+    float: left 
+}
+#box5
+{
+    clear: both;
+    float: right;  
+}
+div
+{
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    padding: 5px;
+}

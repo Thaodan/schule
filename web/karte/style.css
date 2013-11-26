@@ -1,0 +1,70 @@
+@font-face { 
+    font-family: 'Arial'; 
+    src: url('Deutsch-Gotisch.otf');
+}
+/*
+leider etwas hacky habe aber keinen anderen Weg gefunden
+*/
+* { 
+    font-family: Arial;
+}
+body {
+    background-image: url('img/pergament.jpg');
+    background-position: center,top;
+    Background-color: black;
+    Background-size: cover;
+    color: white;
+}
+
+table {
+    margin: auto auto;
+    text-align: center;
+    width: auto;
+}
+h1 {
+    font-size: xx-large;
+    text-align: center
+}
+.td_head1 {
+    height: 75px;  
+    width: 350px;
+    text-align: center; 
+    /*FIXME: -moz-column-colspan: 4;*/
+    font-size: xx-large;
+}
+
+.td_head2 {
+    font-size: x-large;
+    align: center;
+}
+.td, .td1 {
+    text-align: center
+}
+.td {
+    height: 30px;
+    width: 50px;
+    font-weight: bold;
+    font-size: x-large;
+}
+.td1 {
+    height: 80px;
+    width: 350px;
+    font-size: large;
+}
+.td_empty_box_large {
+    /* FIXME */
+    height: 80px;
+}
+.td_price {
+    font-style: italic;
+    font-size: large;
+}
+.image_preview {
+    height: 80px;
+    width: 100px;
+}
+
+.image_preview1 { 
+    height: 10%;
+    width: 15%;
+}

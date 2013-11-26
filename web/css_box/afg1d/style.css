@@ -1,0 +1,21 @@
+#main 
+{
+    float: right
+}
+#head
+{
+
+}
+#side
+{
+    
+
+}
+div
+{
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    padding: 5px;
+}
