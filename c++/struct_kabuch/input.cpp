@@ -8,16 +8,16 @@ int lieszahl(void)
 
 bool add_name(schuler *Schuler)
 {
-    string raw_name;
-    vector<string> name;
+    string name;
+    string vorname;
 
     cout << "Please give name,first name(press q to quit):";
-    cin >> raw_name;
-    if ( raw_name[0] == 'q' )
+    cin >> name[0];
+    if ( name[0][0] == 'q' )
 	return false;
-    name = split(",", raw_name);
-    Schuler->name = name[0];
-    Schuler->vorname = name[1];
+    cin >> name[1];
+    Schuler->name = name;
+    Schuler->vorname = vorname;
 
     return true;
 }
