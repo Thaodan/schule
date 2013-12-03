@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 #define STARTWERT 65
-int walze[26];
+vector<int> walze = {2,4,0,1,11,5,3,6,13,7,17,25,8,15,20,9,12,16,22,18,21,19,24,14,23};
 
 vector<int> umwandeln(string text)
 {
@@ -22,14 +22,29 @@ string verschlussel(string text)
     string verschlussel_text;
     vector<int> verschlussel_text_zahl = umwandeln(text);
     int versatz=0;
-    for ( int index=0; index < verschlussel_text_zahl.size(); index++)
+    for ( int index=0; index <= text.size(); index++)
     {
 	verschlussel_text[index] = char(walze[
 					    (verschlussel_text_zahl[index]
 					     + versatz) % 26] + STARTWERT);
     }
-    cout << verschlussel_text;
     return verschlussel_text;
+}
+
+string entschlussel(string cybertext)
+{
+    string klar_text(cybertext.size());
+    vector<int> cybertext_int(cybertext.size()) = umwandeln(cybertext);
+    int versatz=0;
+    vector<int>::iterator it;
+    for (int i=0;i < cybertext_int.size();i++)
+    {
+	it = find( walze.begin(), walze.end() (cybertext_int[i] - versatz % 26 ) );
+	klar_text[i] = char(walze[it] + STARTWERT);
+	versatz++;
+    }
+
+    return klar_text;
 }
 int stream_count(ifstream *stream_raw)
 {
@@ -44,30 +59,33 @@ int stream_count(ifstream *stream_raw)
     stream_raw->seekg(0);
     return counter;
 }
-void stream2string (ifstream *stream_raw, vector<string> stream)
+
+vector<string>  stream2string (ifstream *stream_raw, int size)
 {
     string line;
+    vector<string> stream(size);
     int counter=0;
     while ( getline(*stream_raw, line) )
     {
 	stream[counter]=line;
 	counter++;
-    }
+    } 
+
+    return stream;
 }
 int main(int argc, char* argv[])
 {       
-    walze[0] = 1;
     ifstream input;
     int input_counter;
     input.open("/home/bidar/hallo.txt", fstream::in);
     input_counter = stream_count(&input);
     vector<string> text(input_counter);
     vector<string> text2(input_counter);
-    stream2string(&input, text);
+    text = stream2string(&input,input_counter);
     text2[0] = verschlussel(text[0]);
-    for(int i=0; i < text2.size();i++)
+    for(int i=0; i < text2[0].length();i++)
     {
-	cout << text2[i];
+	cout << text2[0][i];
     }
 	     
     return 0;
