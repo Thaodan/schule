@@ -6,14 +6,14 @@
 
 body{
 	background-color:grey;
-	font:12pt "verdana,arial", sans-serif;
+	font:12pt , sans-serif;
 	text-align:center;
 }
 #seite{
 	margin:0 auto;
 	padding:10px 10px 10px 10px;
 	text-align:left;
-	width:715px
+	width: 1284px;
 }
 
 /* -------------- Navigation ------------------*/
@@ -38,7 +38,7 @@ body{
 
 #navigation ul li a{
 	text-decoration:none;
-	border-bottom:4px solid #fff;
+	border-bottom:4px solid #666666;
 	/*color:#666666;*/
 	font-size:12pt;
 	font-weight:bold;
@@ -46,7 +46,7 @@ body{
 
 #navigation ul li a:hover{
 	text-decoration:none;
-	border-bottom:4px solid #666666
+	border-bottom:4px solid #fff;
 }
 
 /* ------- ----- Logobereich ------------------*/
@@ -66,21 +66,22 @@ body{
 /* -----------  Textbereiche ------------------*/
 
 #oben{
-    background-image:url(bild.jpg);
-    height:168px;
+    background-image:url(nav.png);
+    background-repeat:repeat;
+    height:73px;
     width:715px;
     
 
 }
 
-#links{
-    Background: grey;
+#content{
+    background: grey;
     float:left;
     margin:0 0 20px 0;
     width:713px;
 }
 
-#links p {
+#content p {
     color: white;
 }
 #rechts{
@@ -105,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
 	margin:25px 0 0 0
 }
 
-#links p{
+#content p{
 	text-align:justify
 }
 
