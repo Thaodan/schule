@@ -7,7 +7,7 @@ create table if not exists Bestellungen (
        Bestelldatum date,
        Liefertermin date,
        Bezahlt_am date,
-       primary key(BestellNr)
+       primary key BestellNr,
 );
 
 create table if not exists Kunden (
@@ -35,5 +35,18 @@ create table if not exists Artikel (
        Einkaufspreis float, 
        Verkaufspreis float,
        USTSatz int,
-       Lieferbar date,
+       Lieferbar int,
+);
+
+create table if not exists Lieferanten (
+       LieferantenCode int, 
+       Name varchar(25),
+       Vertreter varchar(25),
+       Strasse varchar(25),
+       Plz varchar(25), 
+       Ort varchar(25),
+       Telefon varchar(40),
+       Telefax varchar(25),
+       Rabatt int, 
+       Konditionen int, 
 );
