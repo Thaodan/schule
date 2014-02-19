@@ -1,0 +1,33 @@
+# Object files
+*.o
+*.ko
+*.OBJ
+*.obj
+
+
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# misc 
+*.LST
+*.lst
+*.M51
+*.m51
+*.Bak
+*.bak
+*.lnp
+*.Opt
