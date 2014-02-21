@@ -2,7 +2,7 @@
 #include <iostream>
 void bruch::print(void)
 {
-    std::cout << zahler << "/" < nenner << std::endl;
+    std::cout << v_zahler << "/" << v_nenner << std::endl;
 }
 int  bruch::zahler(void)
 {
