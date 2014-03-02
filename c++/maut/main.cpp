@@ -1,11 +1,11 @@
 #include "mautstelle.hpp"
 #include <iostream>
+#include "status_window.hpp"
 int main(void)
 {
     mautstelle Maustelle;
-    char quit_char;
-    
-    for(std::cin.get(quit_char);quit_char != 'e';)
+    status_window(Maustelle);
+    for(char quit_char='F';quit_char != 'e';std::cin.get(quit_char))
     {
 	switch(quit_char)
 	{
@@ -18,6 +18,7 @@ int main(void)
 	    Maustelle.pkw_bezahlt();
 	    break;
 	}
+	status_window(Maustelle);
     }
 
     return 0;

@@ -6,23 +6,33 @@ mautstelle::mautstelle()
     v_kasse=0;
 }
 
-float kasse(void)
+float mautstelle::kasse(void)
 {
-    return v_kasse;
+    return this->v_kasse;
 }
 void mautstelle::akt_bezahlen(void)
 {
     v_kasse=(anzahl_lkws*PREIS_LKW)+(anzahl_pkws*PREIS_PKW);
 }
-void mautstelle::lkw_bezahlt(int anzahl=1)
+void mautstelle::lkw_bezahlt(int anzahl)
 {
     anzahl_lkws+=anzahl;
     akt_bezahlen();
 }
 
 
-void mautstelle::pkw_bezahlt(int anzahl=1)
+void mautstelle::pkw_bezahlt(int anzahl)
 {
     anzahl_pkws=+anzahl;
     akt_bezahlen();
+}
+
+int mautstelle::lkws(void)
+{
+    return this->anzahl_lkws;
+}
+
+int mautstelle::pkws(void)
+{
+    return this->anzahl_pkws;
 }
