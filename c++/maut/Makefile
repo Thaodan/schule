@@ -1,6 +1,6 @@
 CXX=g++
 TARGET=maut
-OBJS=
+OBJS=main.o meth.o status_window.o
 HEADER=mautstelle.hpp
 override CXXFLAGS+=-std=c++11 -Wall
 
