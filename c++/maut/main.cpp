@@ -4,18 +4,18 @@ int main(void)
 {
     mautstelle Maustelle;
     char quit_char;
-
-    while((c = std::cin.get(quit_char)) != 'e')
+    
+    for(std::cin.get(quit_char);quit_char != 'e';)
     {
-	switch(c)
+	switch(quit_char)
 	{
-	case l:
+	case 'l':
 	{
-	    lkw_bezahlt();
+	    Maustelle.lkw_bezahlt();
 	    break;
 	}
-	case p:
-	    pkw_bezahlt();
+	case 'p':
+	    Maustelle.pkw_bezahlt();
 	    break;
 	}
     }
