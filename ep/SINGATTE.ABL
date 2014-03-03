@@ -1,0 +1,10 @@
+module Gatter
+title 'Gatter'
+Gatter device 'p22v10c';
+declarations
+        a, b pin 3,4; "Eing„nge"
+        And pin 17;
+                                      "Ausg„nge"
+equations
+        And = a&b;
+end Gatter
