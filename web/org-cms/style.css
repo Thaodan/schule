@@ -1,23 +1,21 @@
 /* ------------ Allgemeines --------------------*/
 * {
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
 
 body{
-    background-color:grey;
-    font:12pt;
-    text-align:center;
+  background-image: url(5149_a8cb.jpg);
+  background-color:grey;
+  font:12pt;
+  text-align:center;
 }
 #seite{
-    margin:0 0 0 0;
-    padding-bottom: 0;
-    text-align:left;
-    width: 100%;
-    height: 100%;
-    background: url(charity-ride.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+  margin:0 0 0 0;
+  padding-bottom: 0;
+  text-align:left;
+  width: 100%;
+  height: 100%;
 }
 
 /* -------------- Navigation ------------------*/
@@ -26,41 +24,41 @@ body{
 
 
 #navigation{
-    margin:0 auto;
-    float:right;
+  margin:0 auto;
+  float:right;
 }
 
 
 
 #navigation ul li{
-    display:inline;
-    margin:0 10px 0 0;
+  display:inline;
+  margin:0 10px 0 0;
 }
 
 #navigation ul li a{
-    text-decoration:none;
-    border-bottom:4px solid #666666;
-    /*color:#666666;*/
-    font-size:12pt;
-    font-weight:bold;
+  text-decoration:none;
+  border-bottom:4px solid #666666;
+  /*color:#666666;*/
+  font-size:12pt;
+  font-weight:bold;
 }
 
 #navigation ul li a:hover{
-    text-decoration:none;
-    border-bottom:4px solid #fff;
+  text-decoration:none;
+  border-bottom:4px solid #fff;
 }
 
 /* ------- ----- Logobereich ------------------*/
 .titel{
-    float:left;
-    width:90px;
-    padding:0 10px 0 0
+  float:left;
+  width:90px;
+  padding:0 10px 0 0
 }
 
 .titel img{
-    border:0
-    width: 86px;
-    height: 68px;
+  border:0
+  width: 86px;
+  height: 68px;
 }
 
 
@@ -69,37 +67,60 @@ body{
 /* -----------  Textbereiche ------------------*/
 
 #oben{
-    background-image:url(nav.png);
-    background-repeat:repeat;
-    height:40px;
-    width:100%;
+  background-image:url(nav.png);
+  background-repeat:repeat;
+  height:40px;
+  width:100%;
 }
 
 #content{
-    float:left;
-    margin:0 auto;
-    height: 100;
-    width:100%;
-    text-align: center;
+  float:left;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1024px;
+  width:768px;
+  text-align: center;
 }
 #container {
     margin: 0 auto;
     width: 1280px;
     height: 720px;
 }
+#content div#hover_area {
+    display: block;
+    float: right;
+    width: auto;
+    height: auto;
+    background-color: rgba(200,200, 200, 0.35);
+}
+
+#content div#hover_area:hover {
+   /* diplay: block;*/
+}
 
 #content p {
     color: white;
 }
 
-#center_video {
+#intro {
+    background: rgba(200,200, 200, 0.35);
+    width: 800px;
     height: auto;
-    width: 75%;
+}
+#news {
+    background: rgba(200,200, 200, 0.35);
+    width: 800px;
+    height: auto;
+}
+#news #unicorn {
+    width: 800px;
+    height: 600px;
 }
 #unten{
     background:#666;
     clear:both;
     width:100%;
+/*height: 15%;*/
 }
 
 /* ----------  Schriftformatierungen ------------------*/
@@ -143,4 +164,14 @@ a:hover{
 
 #unten a:hover{
     text-decoration:none
+}
+
+
+
+code {
+    font-family: "Droid Sans Mono";
+    background-color: #eeeeee;
+    padding: 2pt;
+    margin-right: 1pt;
+    box-shadow: 1px 1px 1px #aaa;
 }
