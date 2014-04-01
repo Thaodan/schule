@@ -1,5 +1,5 @@
-module Gatter
-title 'Gatter'
+module Singatte
+title 'singatte'
 Gatter device 'p22v10c';
 declarations
         a, b pin 3,4; "Eing„nge"
@@ -7,4 +7,4 @@ declarations
                                       "Ausg„nge"
 equations
         And = a&b;
-end Gatter
+end Singatte

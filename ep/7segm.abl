@@ -1,8 +1,8 @@
-module 7segment
+module _7segm
 
 Title '7segmentdecoder'
 
-7segment Device 'p22v10c';
+_7segm Device 'p22v10c';
 
 a pin 3;
 b pin 4;
@@ -12,10 +12,10 @@ a1 pin 18 istype 'com';
 a2 pin 19 istype 'com';
 a3 pin 20 istype 'com';
 a4 pin 21 istype 'com';
-a5 pin 22 istype 'com';
-a6 pin 23 istype 'com';
-a7 pin 24 istype 'com';
-
+a5 pin 23 istype 'com';
+a6 pin 24 istype 'com';
+a7 pin 25 istype 'com';
+        
 truth_Table
 ([a,b,c,d]->[a1,a2,a3,a4,a5,a6,a7])
 [0,0,0,0]->[1,1,1,1,1,1,0]; "0"
@@ -35,4 +35,4 @@ truth_Table
 [1,1,1,0]->[1,0,0,1,1,1,1]; "E"
 [1,1,1,1]->[1,0,0,0,1,1,1]; "F"
 
-end 7segment
+end _7segm
