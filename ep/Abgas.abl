@@ -1,0 +1,14 @@
+module Abgas
+title 'Garage'
+
+Abgas device 'P22v10c';
+
+declarations
+        a,b,c   pin 3,4,5;
+        ausgang pin 18;
+
+equations
+
+ausgang = !(a#b#c);
+
+end Abgas
