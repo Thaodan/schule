@@ -118,7 +118,27 @@ body{
     height: 10%;
     width: 10%;
 }
-
+#content p {
+    color: white;
+}
+#intro,#news {
+    background: rgba(0,128, 0, 0.35);
+    border: 2px green dashed;
+}
+#intro {
+    width: 1240x;
+    height: auto;
+    border: 2px green dashed;
+    /*margin-right: 10%;
+    margin-left: 10%;*/
+}
+#news {
+    width: 1240px;
+    height: auto;}
+#news #Emacs {
+    width: 800px;
+    height: 600px;
+}
 #unten{
     border: 2px green dashed;
     background-color: rgba(0,128, 0, 0.35);
