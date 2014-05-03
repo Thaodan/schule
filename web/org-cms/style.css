@@ -5,7 +5,7 @@
 }
 
 body{
-   /* background-image: url(http://batsov.com/images/articles/emacs_user.jpg);*/
+    background-image: url(http://batsov.com/images/articles/emacs_user.jpg);
     background-color:grey;
     background-size: 100% 100%;
     background-repeat: no-repeat;
